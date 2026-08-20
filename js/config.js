@@ -4,10 +4,10 @@
  */
 const CONFIG = {
   // Kakao Maps API 키 (https://developers.kakao.com 에서 발급)
-  KAKAO_API_KEY: 'c0002a1e42a3445ffbb0f01f7e63de3f',
+  KAKAO_API_KEY: '38f0e104d51d9fc131690180b5371947',
 
   // Kakao REST API 키 (정적 지도 이미지용)
-  KAKAO_REST_KEY: 'b4723056fa026f8dc70c983fe0682d85',
+  KAKAO_REST_KEY: '4694002d439181ea4dd484c516c33226',
 
   // 기본 출발지 주소
   DEFAULT_START: '서울특별시 강남구 학동로 426',  // 강남구청
