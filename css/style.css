@@ -1,0 +1,386 @@
+/* G-Navi 스타일 */
+
+/* 전체 레이아웃 */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Malgun Gothic', 'Segoe UI', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* 헤더 */
+.app-header {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.app-header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.btn-settings {
+  background: none;
+  border: none;
+  color: #adb5bd;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.btn-settings:hover {
+  color: #fff;
+}
+
+.app-header .subtitle {
+  font-size: 0.8rem;
+  color: #adb5bd;
+}
+
+/* 메인 영역 */
+.app-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 좌측 패널 */
+.side-panel {
+  width: 380px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dee2e6;
+  background: #fff;
+  overflow: hidden;
+}
+
+.panel-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+/* 지도 영역 */
+.map-area {
+  flex: 1;
+  position: relative;
+}
+
+#map-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* 섹션 */
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #495057;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.section-title .icon {
+  font-size: 1rem;
+}
+
+.section-group {
+  margin-bottom: 18px;
+}
+
+/* 입력 필드 */
+.input-with-btn {
+  display: flex;
+  gap: 4px;
+}
+
+.input-with-btn input {
+  flex: 1;
+}
+
+/* 주소 검색 후보 목록 */
+.search-candidates {
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin-top: 4px;
+  background: #fff;
+}
+
+.search-candidate-item {
+  padding: 6px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.82rem;
+}
+
+.search-candidate-item:last-child {
+  border-bottom: none;
+}
+
+.search-candidate-item:hover {
+  background: #e8f4fd;
+}
+
+.search-candidate-item .candidate-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.search-candidate-item .candidate-addr {
+  color: #666;
+  font-size: 0.78rem;
+}
+
+/* 드래그앤드롭 영역 */
+.drop-zone {
+  border: 2px dashed #ced4da;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  color: #868e96;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.drop-zone:hover, .drop-zone.drag-over {
+  border-color: #3B82F6;
+  background: #eff6ff;
+  color: #3B82F6;
+}
+
+.drop-zone .drop-icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* 경유지 미리보기 목록 */
+.waypoint-preview {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.waypoint-item:last-child {
+  border-bottom: none !important;
+}
+
+/* 경로 결과 패널 */
+.route-list {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.route-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #f1f3f5;
+  font-size: 0.85rem;
+}
+
+.route-item:last-child {
+  border-bottom: none;
+}
+
+.route-badge {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.route-address {
+  flex: 1;
+  word-break: break-all;
+}
+
+.route-memo {
+  display: block;
+  font-size: 0.75rem;
+}
+
+.route-drag-handle {
+  cursor: grab;
+  color: #adb5bd;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.route-drag-handle:hover {
+  color: #495057;
+}
+
+.route-waypoint.dragging {
+  opacity: 0.4;
+  background: #e9ecef;
+}
+
+.badge-seg {
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+/* 구간 그룹 */
+.segment-group {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+/* 토스트 */
+.toast-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #333;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.toast-message.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 이동수단 라디오 */
+.transport-group {
+  display: flex;
+  gap: 12px;
+}
+
+.transport-group label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* API 키 미설정 오버레이 */
+.api-key-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.api-key-dialog {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.api-key-dialog h3 {
+  margin-top: 0;
+}
+
+/* QR 모달 */
+.qr-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.qr-modal-dialog {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 360px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.qr-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.qr-modal-header h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.qr-modal-header .btn-close {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  line-height: 1;
+}
+
+.qr-code-area {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.qr-modal-footer {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .app-main {
+    flex-direction: column;
+  }
+  .side-panel {
+    width: 100%;
+    min-width: auto;
+    max-height: 50vh;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+  .map-area {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- 배경 원 -->
+  <circle cx="128" cy="128" r="120" fill="#1a73e8"/>
+  <!-- 네비게이션 화살표 -->
+  <polygon points="128,30 200,210 128,170 56,210" fill="white" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+</svg>

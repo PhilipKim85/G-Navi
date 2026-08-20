@@ -1,0 +1,11 @@
+G-Navi - 현장조사 경로 최적화 프로그램
+Copyright (c) 2026 강남구
+
+이 소프트웨어는 다음 오픈소스 라이브러리를 사용합니다:
+
+- Bootstrap 5.3 (MIT) - UI 프레임워크 - https://getbootstrap.com
+- Kakao Maps SDK (Kakao 이용약관) - 지도/주소검색 - https://developers.kakao.com
+- QRCode.js (MIT) - QR 코드 생성 - https://github.com/davidshimjs/qrcodejs
+- SheetJS/xlsx (Apache-2.0) - 엑셀 파일 처리 - https://sheetjs.com
+
+AGPL 라이선스 컴포넌트를 사용하지 않습니다.

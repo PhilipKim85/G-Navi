@@ -1,0 +1,20 @@
+# 로컬 실행용 (웹 배포에 불필요)
+G-Navi 실행.bat
+setup.vbs
+
+# 문서/저작권 관련
+*.docx
+_convert_to_docx.py
+copyright_source_code.txt
+
+# 개발 문서
+DEVELOPMENT.md
+CLAUDE.md
+
+# 시스템 파일
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
