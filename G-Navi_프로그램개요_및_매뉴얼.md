@@ -72,10 +72,28 @@ G-Navi/
 
 ### 1.6 실행 방식
 
-- **서버 불필요**: 로컬 HTML 파일로 직접 실행 (file:// 프로토콜)
+3가지 방식으로 사용할 수 있습니다:
+
+| 방식 | 설명 |
+|------|------|
+| **웹 접속** | https://g-navi-sigma.vercel.app 접속 (설치 불필요, 즉시 사용) |
+| **폴더 복사** | G-Navi 폴더를 다른 PC에 복사 후 `index.html` 또는 `.bat` 실행 |
+| **서버 호스팅** | 구청 웹서버에 정적 파일 배포 → 직원들 URL 접속 |
+
+- 모든 방식에서 **인터넷 연결 필요** (카카오맵 API, Bootstrap CDN 사용)
 - `G-Navi 실행.bat` 더블클릭 또는 `index.html` 직접 열기
 - `setup.vbs` 실행 시 바탕화면에 바로가기 아이콘 자동 생성
 - Kakao Maps API 키 미설정 시에도 Nominatim 폴백으로 기본 동작
+
+### 1.7 웹 배포 정보
+
+| 항목 | 내용 |
+|------|------|
+| 배포 플랫폼 | Vercel (무료 정적 호스팅) |
+| 배포 URL | https://g-navi-sigma.vercel.app |
+| GitHub 저장소 | https://github.com/PhilipKim85/G-Navi |
+| 자동 배포 | GitHub master 브랜치 push 시 Vercel 자동 재배포 |
+| Kakao API 도메인 등록 | `https://g-navi-sigma.vercel.app`, `file://` |
 
 ---
 
